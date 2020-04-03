@@ -26,7 +26,7 @@ def return_info():
     if request.method == "POST": 
        for i in request.form.keys():
            if i in dict.dict_of_camping_returns.keys():
-               return_string = return_string + dict.dict_of_camping_returns[i]
+               return_string = return_string + dict.dict_of_off_roading_returns[i]
            else:
                continue
     return_string = return_string + dict.close
@@ -38,7 +38,7 @@ def return_info():
     if request.method == "POST": 
        for i in request.form.keys():
            if i in dict.dict_of_camping_returns.keys():
-               return_string = return_string + dict.dict_of_camping_returns[i]
+               return_string = return_string + dict.dict_of_shooting_returns[i]
            else:
                continue
     return_string = return_string + dict.close
@@ -50,12 +50,23 @@ def return_info():
     if request.method == "POST": 
        for i in request.form.keys():
            if i in dict.dict_of_camping_returns.keys():
-               return_string = return_string + dict.dict_of_camping_returns[i]
+               return_string = return_string + dict.dict_of_fishing_returns[i]
            else:
                continue
     return_string = return_string + dict.close
     return return_string
 
+@app.route("/return_info5", methods=["POST"])
+def return_info():
+    return_string = dict.opening
+    if request.method == "POST": 
+       for i in request.form.keys():
+           if i in dict.dict_of_camping_returns.keys():
+               return_string = return_string + dict.dict_of_LARPing_returns[i]
+           else:
+               continue
+    return_string = return_string + dict.close
+    return return_string
 
 
 if __name__ == "__main__":
