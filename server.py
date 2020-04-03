@@ -21,7 +21,7 @@ def return_info():
     return return_string
 
 @app.route("/return_info2", methods=["POST"])
-def return_info():
+def return_info2():
     return_string = dict.opening
     if request.method == "POST": 
        for i in request.form.keys():
@@ -33,7 +33,7 @@ def return_info():
     return return_string
 
 @app.route("/return_info3", methods=["POST"])
-def return_info():
+def return_info3():
     return_string = dict.opening
     if request.method == "POST": 
        for i in request.form.keys():
@@ -45,7 +45,7 @@ def return_info():
     return return_string
 
 @app.route("/return_info4", methods=["POST"])
-def return_info():
+def return_info4():
     return_string = dict.opening
     if request.method == "POST": 
        for i in request.form.keys():
@@ -57,7 +57,7 @@ def return_info():
     return return_string
 
 @app.route("/return_info5", methods=["POST"])
-def return_info():
+def return_info5():
     return_string = dict.opening
     if request.method == "POST": 
        for i in request.form.keys():
