@@ -6,8 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    #will render the html
-    pass
+    return render_template('index.html')
 
 @app.route("/", methods=["POST"])
 def return_info(string):
