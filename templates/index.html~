@@ -54,7 +54,7 @@
     <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">Camping</button>
         <div id="myDropdown" class="dropdown-content">
-		<form action="{{ url_for('return_info') }}" method="POST">
+		<form action="{{ url_for('returninfo') }}" method="POST">
           <div class = "amount-attending">
             <h3>How many people will be with you?</h3>
             <label><input type="checkbox" name="q1" value="c1">
