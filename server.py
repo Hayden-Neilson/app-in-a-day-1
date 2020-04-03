@@ -10,8 +10,15 @@ def home():
 
 @app.route("/return_info", methods=["POST"])
 def return_info():
-    if request.method == "POST":
-       return request.form
+    return_string = dict.opening
+    if request.method == "POST": 
+       for i in request.form.keys():
+           if i in dict.dict_of_camping_returns.keys():
+               return_string = return_string + dict.dict_of_camping_returns[i]
+           else:
+               continue
+    return_string = return_string + dict.close
+    return return_string
 
 
 if __name__ == "__main__":
