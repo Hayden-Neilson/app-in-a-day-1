@@ -1,919 +1,829 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap'" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap'" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <title>Team Exotic's ActivityHub</title>
-    <style>
-
-      .dropbtn {
-        background-color: #0b2e19;
-        width: 1200px;
-        
-      .dropbtn, .dropbtn5 {
-        background-color: #3498db;
-        width: 900px;
-
-        color: white;
-        padding: 16px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-      }
-
-      .dropbtn:hover,
-      .dropbtn:focus {
-        background-color: #348568;
-      }
-
-      .dropdown {
-        position: relative;
-        display: inline-block;
-      }
-
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 1200px;
-        z-index: 1;
-        align-content: flex-start;
-      }
-
-      .dropdown-content input {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
-
-      .dropdown-content a:hover {
-        background-color: #ddd;
-      }
-
-      .show {
-        display: block;
-      }
-      /* Common styles  */
-body {
-    margin: 0px;
-    font-family: 'Roboto', sans-serif; 
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto Slab', serif;
-}
-/* Footer styles*/
-.footer{
-    background-color: #0b2e19;
-    color: #cbcbcb;
-    font-family: "Ubuntu Condensed", sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 400px;
-    margin-top: -4px;
-}
-
-.footer > .logo-footer img{
-width: 120px;
-height: 100%;
-/*filter: brightness(50%);*/
-opacity: 0.5;
-margin-bottom: 10px;
-}
-
-.footer > .footer-phone-hours span {
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 1em;
-    letter-spacing: 2px;
-}
-
-.footer > .footer-phone-hours > .hours {
-    color: #cea135;
-    font-size: 1em;
-    text-transform: capitalize;
-
-}
-
-.footer > .links-wrapper {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    width: 400px;
-}
-
-.footer > .social-media-icons-wrapper {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    width: 300px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.footer > .social-media-icons-wrapper a {
-    font-size: 1.5em;
-    color: #cbcbcb;
-    transition: .5s;
-}
-
-.footer > .social-media-icons-wrapper a:hover {
-    color: #cea135;
-}
-
-.footer > .copyright-wrapper {
-    margin-bottom: 10px;
-    font-size: 0.7em;
-    color: #858585
-}
-
-/* Hero section styles */
-.hero-section {
-    background-image: url(../images/backgrounds/trees.jpg);
-    padding: 100px;
-    height: 300px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.hero-section > .top-heading {
-    padding: 1px 20px;
-    background-color: white;
-    color: #cbcbcb;
-    width: 290px;
-    border-radius: 2px;
-}
-
-.hero-section > .bottom-heading {
-    background-color: white;
-    color: white;
-    padding: 1px 20px;
-    margin-top: 15px;
-    width: 107px;
-    border-radius: 2px;
-}   
-
-/* Feature section styles */
-.features-section {
-    height:400px;
- 
-    background-color: white;
-    border-top: 10px solid white;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Ubuntu Condensed", sans-serif;
-    box-shadow: inset 0px -26px 79px -8px rgba(0,0,0,0.58);
-}
-
-.features-section > .columns-wrapper {
-    width: 1000px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.features-section > .columns-wrapper > .column {
-    padding: 20px;
-    margin: 42px;
-    text-align: center;
-    border-bottom: 5px solid transparent;
-    border-radius: 10px;
-    transition: 1s;
-}
-
-.features-section > .columns-wrapper > .column:hover {
-    border-bottom: 5px solid white;
-} 
-
-.features-section > .columns-wrapper > .column :nth-child(1) {
-    font-size: 3em;
-}
-
-.features-section > .columns-wrapper > .column :nth-child(2) {
-    font-size: 1.5em;
-    font-weight: 900;
-    height: 50px;
-    transition: 1s;
-}
-.features-section > .columns-wrapper > .column :nth-child(2):hover {
-    letter-spacing: 1px;
-}
-
-.features-section > .columns-wrapper > .column :nth-child(3) {
-    letter-spacing: 2px;
-}
-
-@media (max-width: 615px) {
-    .navigation-wrapper {
-        flex-direction: column;
-        height: 100%;
+  <title>Team Exotic's ActivityHub</title>
+  <style>
+    .dropbtn {
+      background-color: #0b2e19;
+      width: 1200px;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
     }
 
-    .navigation-wrapper > .left-column {
+    .dropbtn:hover,
+    .dropbtn:focus {
+      background-color: #348568;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 1200px;
+      z-index: 1;
+      align-content: flex-start;
+    }
+
+    .dropdown-content input {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .show {
+      display: block;
+    }
+
+    /* Common styles  */
+    body {
+      margin: 0px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Roboto Slab', serif;
+    }
+
+    /* Footer styles*/
+    .footer {
+      background-color: #0b2e19;
+      color: #cbcbcb;
+      font-family: "Ubuntu Condensed", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 400px;
+      margin-top: -4px;
+    }
+
+    .footer>.logo-footer img {
+      width: 120px;
+      height: 100%;
+      /*filter: brightness(50%);*/
+      opacity: 0.5;
+      margin-bottom: 10px;
+    }
+
+    .footer>.footer-phone-hours span {
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 1em;
+      letter-spacing: 2px;
+    }
+
+    .footer>.footer-phone-hours>.hours {
+      color: #cea135;
+      font-size: 1em;
+      text-transform: capitalize;
+
+    }
+
+    .footer>.links-wrapper {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      width: 400px;
+    }
+
+    .footer>.social-media-icons-wrapper {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      width: 300px;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .footer>.social-media-icons-wrapper a {
+      font-size: 1.5em;
+      color: #cbcbcb;
+      transition: .5s;
+    }
+
+    .footer>.social-media-icons-wrapper a:hover {
+      color: #cea135;
+    }
+
+    .footer>.copyright-wrapper {
+      margin-bottom: 10px;
+      font-size: 0.7em;
+      color: #858585
+    }
+
+    /* Hero section styles */
+    .hero-section {
+      background-image: url(../images/backgrounds/trees.jpg);
+      padding: 100px;
+      height: 300px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .hero-section>.top-heading {
+      padding: 1px 20px;
+      background-color: white;
+      color: #cbcbcb;
+      width: 290px;
+      border-radius: 2px;
+    }
+
+    .hero-section>.bottom-heading {
+      background-color: white;
+      color: white;
+      padding: 1px 20px;
+      margin-top: 15px;
+      width: 107px;
+      border-radius: 2px;
+    }
+
+    /* Feature section styles */
+    .features-section {
+      height: 400px;
+
+      background-color: white;
+      border-top: 10px solid white;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Ubuntu Condensed", sans-serif;
+      box-shadow: inset 0px -26px 79px -8px rgba(0, 0, 0, 0.58);
+    }
+
+    .features-section>.columns-wrapper {
+      width: 1000px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .features-section>.columns-wrapper>.column {
+      padding: 20px;
+      margin: 42px;
+      text-align: center;
+      border-bottom: 5px solid transparent;
+      border-radius: 10px;
+      transition: 1s;
+    }
+
+    .features-section>.columns-wrapper>.column:hover {
+      border-bottom: 5px solid white;
+    }
+
+    .features-section>.columns-wrapper>.column :nth-child(1) {
+      font-size: 3em;
+    }
+
+    .features-section>.columns-wrapper>.column :nth-child(2) {
+      font-size: 1.5em;
+      font-weight: 900;
+      height: 50px;
+      transition: 1s;
+    }
+
+    .features-section>.columns-wrapper>.column :nth-child(2):hover {
+      letter-spacing: 1px;
+    }
+
+    .features-section>.columns-wrapper>.column :nth-child(3) {
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 615px) {
+      .navigation-wrapper {
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .navigation-wrapper>.left-column {
         order: 2;
         margin-top: 10px;
         margin-bottom: 15px;
-    }
+      }
 
-    .navigation-wrapper > .center-column {
+      .navigation-wrapper>.center-column {
         order: 1;
         width: 100%;
-    }
+      }
 
-    .navigation-wrapper > .right-column {
+      .navigation-wrapper>.right-column {
         order: 3;
         margin-top: 15px;
-    }
+      }
 
-    .links-wrapper {
+      .links-wrapper {
         flex-direction: column;
         margin-bottom: 20px;
-    }
+      }
 
-    .links-wrapper > .nav-link {
+      .links-wrapper>.nav-link {
         margin-top: 10px;
-        margin-bottom: 10px;     
+        margin-bottom: 10px;
         font-size: 1.5em;
-        width: 100%; 
-    }
-    .hero-section {
+        width: 100%;
+      }
+
+      .hero-section {
         padding: 50px 10px;
-    }
+      }
 
-    .features-section {
+      .features-section {
         height: 100%;
-    }
+      }
 
-    .features-section > .columns-wrapper {
+      .features-section>.columns-wrapper {
         width: 100%;
         flex-direction: column;
-    }
+      }
 
-    .footer {
+      .footer {
         height: 100%;
-    }
+      }
 
-    .skewed-header > .skewed-header-wrapper > .skewed-header-content {
+      .skewed-header>.skewed-header-wrapper>.skewed-header-content {
         flex-direction: column;
-    }
+      }
 
-    .skewed-header > .header-bg {
+      .skewed-header>.header-bg {
         background-size: 550px;
-    }
+      }
 
-    .page-container {
+      .page-container {
         padding-left: 21px;
         padding-right: 21px;
-    }
+      }
 
-    .content-wrapper > #chef {
+      .content-wrapper>#chef {
         margin: 0px 0px 25px 0px !important;
         width: 100% !important;
-    }
+      }
 
-    .square {
+      .square {
         grid-template-columns: 1fr !important;
-     }
-     
-    .square > .square-text-wrapper {
-         order: 1;
-     }
+      }
 
-    .square > .img-wrapper {
-         order: 2;
-     }
+      .square>.square-text-wrapper {
+        order: 1;
+      }
 
-     .contact-grid-wrapper {
+      .square>.img-wrapper {
+        order: 2;
+      }
+
+      .contact-grid-wrapper {
         width: 100%;
         grid-template-columns: 1fr;
         grid-gap: 10px;
-    }
+      }
 
-    .form input {
+      .form input {
         padding: 1.5rem 0rem;
-    }
+      }
 
-    .form textarea {
+      .form textarea {
         padding: 1.5rem 0rem;
+      }
     }
-}
 
-/* Common nav styles  */
-.navigation-wrapper {
-    height: 190px;
-    background-color: white;
-    color: #0b2e19;
-/* Flexbox container */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px 100px;
-}
+    /* Common nav styles  */
+    .navigation-wrapper {
+      height: 190px;
+      background-color: white;
+      color: #0b2e19;
+      /* Flexbox container */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 100px;
+    }
 
-/* Left column styles*/
-.navigation-wrapper > .left-column {
-    display: flex;
-    align-items: center;
-}
+    /* Left column styles*/
+    .navigation-wrapper>.left-column {
+      display: flex;
+      align-items: center;
+    }
 
 
-.navigation-wrapper > .left-column > .icon {
-    margin-right: 15px;
-    font-size: 2em;
-}
+    .navigation-wrapper>.left-column>.icon {
+      margin-right: 15px;
+      font-size: 2em;
+    }
 
-.navigation-wrapper > .left-column > .contact-hours-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 10px;
-}
+    .navigation-wrapper>.left-column>.contact-hours-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+    }
 
-.navigation-wrapper > .left-column > .contact-hours-wrapper > .hours {
-    font-family: 'Ubuntu Condensed', sans-serif;
-    color: #858585;
-    font-size: .8em;
-}
+    .navigation-wrapper>.left-column>.contact-hours-wrapper>.hours {
+      font-family: 'Ubuntu Condensed', sans-serif;
+      color: #858585;
+      font-size: .8em;
+    }
 
-.links-wrapper > .nav-link a {
-    font-family: 'Ubuntu Condensed', sans-serif;
-    color: white;
+    .links-wrapper>.nav-link a {
+      font-family: 'Ubuntu Condensed', sans-serif;
+      color: white;
 
-}
+    }
 
-/* Center column styles*/
+    /* Center column styles*/
 
-.navigation-wrapper > .center-column {
-display: grid;
-grid-template-columns: 1fr;
-grid-gap: 42px;
-width: 500px;
-}
+    .navigation-wrapper>.center-column {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 42px;
+      width: 500px;
+    }
 
-.navigation-wrapper > .center-column >.banner-image {
-    display: flex;
-    justify-content: center;
-}
+    .navigation-wrapper>.center-column>.banner-image {
+      display: flex;
+      justify-content: center;
+    }
 
-.navigation-wrapper > .center-column >.banner-image img {
-    width: 150px;
-    height: 100%;
-}
+    .navigation-wrapper>.center-column>.banner-image img {
+      width: 150px;
+      height: 100%;
+    }
 
-.links-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    .links-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.links-wrapper > .nav-link {
-    width: 70px;
-    text-align: center;
-}
+    .links-wrapper>.nav-link {
+      width: 70px;
+      text-align: center;
+    }
 
-.links-wrapper > .nav-link a {
-    font-family: 'Ubuntu Condensed', sans-serif;
-    color: #cbcbcb;
-    text-decoration: none;
-    transition: 0.5s;
-}
+    .links-wrapper>.nav-link a {
+      font-family: 'Ubuntu Condensed', sans-serif;
+      color: #cbcbcb;
+      text-decoration: none;
+      transition: 0.5s;
+    }
 
-.links-wrapper > .nav-link a:hover {
-    color: #348568;
-    letter-spacing: 2px;
-}
+    .links-wrapper>.nav-link a:hover {
+      color: #348568;
+      letter-spacing: 2px;
+    }
 
-/* Right column styles*/
-.navigation-wrapper > .right-column {
-display: flex;
-align-items: center;
+    /* Right column styles*/
+    .navigation-wrapper>.right-column {
+      display: flex;
+      align-items: center;
 
-}
-.navigation-wrapper > .right-column > .address-wrapper {
-    font-family: 'Ubuntu Condensed', sans-serif;
-    text-align: right;
-}
+    }
 
-.navigation-wrapper > .right-column > .address-wrapper a {
-    color: #858585;
-    text-decoration: none;
-    font-size: .9m;
-    transition: 0.5;
-}
+    .navigation-wrapper>.right-column>.address-wrapper {
+      font-family: 'Ubuntu Condensed', sans-serif;
+      text-align: right;
+    }
 
-.navigation-wrapper > .right-column > .address-wrapper a:hover {
-    color: #0b2e19
-}
-.navigation-wrapper > .right-column > .contact-icon {
-    margin-left: 15px;
-    font-size: 2em;
-}
-.navigation-wrapper > .right-column > .contact-icon a {
-    color:s#0b2e19;
-    transition: .5s;
-}
-.navigation-wrapper > .right-column > .contact-icon a:hover {
-    color: #0b2e19;
-}
+    .navigation-wrapper>.right-column>.address-wrapper a {
+      color: #858585;
+      text-decoration: none;
+      font-size: .9m;
+      transition: 0.5;
+    }
 
-    </style>
-  </head>
-  <body>
-    <div class="navigation-wrapper">
+    .navigation-wrapper>.right-column>.address-wrapper a:hover {
+      color: #0b2e19
+    }
 
-      <div class="left-column">
-        <div class="icon">
-  
-        </div>
-  
-        <div class="contact-hours-wrapper">
-          <div class="phone">
-  
-          </div>
-  
-        </div>
-      </div>
-  
-      <div class="center-column">
-        <div class="banner-image">
-          <img src="images/lake.jpg" alt="Logo">
-        </div>
-  
-        <div class="links-wrapper">
-          <div class="nav-link">
-            <a href="https://www.nwtf.org/hunt/article/ten-outdoor-survival-tips" target="_blank">Tips & Tricks</a>
-          </div>
-  
-          <div class="nav-link">
-            <a href="https://wildlife.utah.gov/licenses/licenses-permits.html" target="_blank">Fishing License</a>
-          </div>
-  
-          <div class="nav-link">
-            <a href="https://www.cabelas.com/category/Camping/104795280.uts" target="_blank">Camping Gear</a>
-          </div>
-  
-          <div class="nav-link">
-            <a href="https://www.letsgoshooting.org/new-shooters/" target="_blank">For New Shooters</a>
-          </div>
-        </div>
-      </div>
-  
-  
-      <div class="right-column">
-        <div class="address-wrapper">
-          <a href="contact.html">
-  
-        </div>
-  
-        <div class="contact-icon">
-          <a href="contact.html">
-  
-          </a>
-        </div>
-      </div>
-  
-    </div>
+    .navigation-wrapper>.right-column>.contact-icon {
+      margin-left: 15px;
+      font-size: 2em;
+    }
 
-    <div class="buttons" align="center">
-      <!-- Camping Button-->
-      <div class="dropdown">
-        <button onclick="myFunction1()" class="dropbtn" class="camping">
-          Camping
-        </button>
-        <div id="myDropdown1" class="dropdown-content">
-          <form action="{{ url_for('return_info') }}" method="POST">
-            <div class="amount-attending">
-              <h3>How many people will be with you?</h3>
-              <label
-                ><input type="checkbox" name="q1" value="c1" /> Camping Alone </label
-              ><br />
-              <label
-                ><input type="checkbox" name="q2" value="c1" /> 2-3 people </label
-              ><br />
-              <label><input type="checkbox" name="q3" value="c1" /> 4 + </label
-              ><br />
-            </div>
+    .navigation-wrapper>.right-column>.contact-icon a {
+      color: s#0b2e19;
+      transition: .5s;
+    }
 
-            <div class="experience-level">
-              <h3>What is your experience level?</h3>
-              <label
-                ><input type="checkbox" name="r1" value="c1" /> Beginner </label
-              ><br />
-              <label
-                ><input type="checkbox" name="r2" value="c1" /> Some Experience </label
-              ><br />
-              <label
-                ><input type="checkbox" name="r3" value="c1" /> I'm practically
-                Bear Grills </label
-              ><br />
-            </div>
+    .navigation-wrapper>.right-column>.contact-icon a:hover {
+      color: #0b2e19;
+    }
+  </style>
+</head>
 
-            <div class="time-lenght">
-              <h3>How long will you be camping?</h3>
-              <label
-                ><input type="checkbox" name="s1" value="c1" />
-                Overnight </label
-              ><br />
-              <label
-                ><input type="checkbox" name="s2" value="c1" /> 2-3 days </label
-              ><br />
-              <label
-                ><input type="checkbox" name="s3" value="c1" /> week+ </label
-              ><br />
-            </div>
-            <input type="submit" value="submit" />
-          </form>
-        </div>
+<body>
+  <div class="navigation-wrapper">
+
+    <div class="left-column">
+      <div class="icon">
+
       </div>
 
-      <!--Off Raoding Button-->
-      <div class="dropdown">
-        <button onclick="myFunction2()" class="dropbtn" class="offroading">
-          Off Roading
-        </button>
-        <div id="myDropdown2" class="dropdown-content">
-          <form action="{{ url_for('return_info2') }}" method="POST">
-            <div class="vehicle-type">
-              <h3>What type of vehicle do you have?</h3>
-              <label
-                ><input type="checkbox" name="q1" value="c1" /> Razor </label
-              ><br />
-              <label
-                ><input type="checkbox" name="q2" value="c1" />
-                Fourwheeler </label
-              ><br />
-              <label><input type="checkbox" name="q3" value="c1" /> Jeep </label
-              ><br />
-            </div>
+      <div class="contact-hours-wrapper">
+        <div class="phone">
 
-            <div class="experience-level-or">
-              <h3>What is your experience level?</h3>
-              <label
-                ><input type="checkbox" name="r1" value="c1" /> Beginner </label
-              ><br />
-              <label
-                ><input type="checkbox" name="r2" value="c1" />
-                Intermediate </label
-              ><br />
-              <label
-                ><input type="checkbox" name="r3" value="c1" /> Expert </label
-              ><br />
-            </div>
-
-            <div class="terrain-type">
-              <h3>What type of riding do you like?</h3>
-              <label
-                ><input type="checkbox" name="s1" value="c1" /> Easy Trails </label
-              ><br />
-              <label
-                ><input type="checkbox" name="s2" value="c1" /> Moderate
-                Obstacles </label
-              ><br />
-              <label
-                ><input type="checkbox" name="s3" value="c1" /> Rocky Terrain </label
-              ><br />
-            </div>
-            <div class="time-lenght-or">
-              <h3>How long do you wanna ride for?</h3>
-              <label
-                ><input type="checkbox" name="t1" value="c1" /> 1-3 Hours </label
-              ><br />
-              <label
-                ><input type="checkbox" name="t2" value="c1" /> 3-5 Hours </label
-              ><br />
-              <label
-                ><input type="checkbox" name="t3" value="c1" /> 5-7 Hours </label
-              ><br />
-            </div>
-            <input type="submit" value="submit" />
-          </form>
         </div>
-      </div>
 
-      <!--Shooting Button-->
-      <div class="dropdown">
-        <button onclick="myFunction3()" class="dropbtn" class="shooting">
-          Shooting
-        </button>
-        <div id="myDropdown3" class="dropdown-content">
-          <form action="{{ url_for('return_info3') }}" method="POST">
-            <div class="indoor-outdoor">
-              <h3>Would you like to be shooting indoor or outdoor?</h3>
-              <label
-                ><input type="checkbox" name="q1" value="c1" /> Indoor </label
-              ><br />
-              <label
-                ><input type="checkbox" name="q2" value="c1" /> Outdoor </label
-              ><br />
-            </div>
-
-            <div class="experience-level-or">
-              <h3>What is your experience level?</h3>
-              <label
-                ><input type="checkbox" name="r1" value="c1" /> Beginner </label
-              ><br />
-              <label
-                ><input type="checkbox" name="r2" value="c1" />
-                Intermediate </label
-              ><br />
-              <label
-                ><input type="checkbox" name="r3" value="c1" /> Expert </label
-              ><br />
-            </div>
-
-            <div class="shooting-type">
-              <h3>what type of shooting will you be doing?</h3>
-              <label
-                ><input type="checkbox" name="s1" value="c1" /> Skeet </label
-              ><br />
-              <label
-                ><input type="checkbox" name="s2" value="c1" /> Rifle </label
-              ><br />
-              <label
-                ><input type="checkbox" name="s3" value="c1" /> Pistol </label
-              ><br />
-              <label
-                ><input type="checkbox" name="s3" value="c1" /> Long Range Rifle </label
-              ><br />
-            </div>
-            <input type="submit" value="submit" />
-          </form>
-        </div>
-      </div>
-      <!-- Fishing Button-->
-      <div class="dropdown">
-        <button onclick="myFunction4()" class="dropbtn" class="fishing">
-          Fishing
-        </button>
-        <div id="myDropdown4" class="dropdown-content">
-          <form action="{{ url_for('return_info4') }}" method="POST">
-            <div class="amount-attending">
-              <h3>How many people will be with you?</h3>
-              <label
-                ><input type="checkbox" name="q1" value="c1" /> Camping Alone </label
-              ><br />
-              <label
-                ><input type="checkbox" name="q2" value="c1" /> 2-3 people </label
-              ><br />
-              <label><input type="checkbox" name="q3" value="c1" /> 4 + </label
-              ><br />
-            </div>
-
-            <div class="experience-level-fi">
-              <h3>What is your experience level?</h3>
-              <label
-                ><input type="checkbox" name="r1" value="c1" /> Beginner </label
-              ><br />
-              <label
-                ><input type="checkbox" name="r2" value="c1" /> Some Experience </label
-              ><br />
-              <label
-                ><input type="checkbox" name="r3" value="c1" /> I'm practically
-                Bear Grills </label
-              ><br />
-            </div>
-
-            <div class="time-lenght">
-              <h3>How long will you be fishing for?</h3>
-              <label
-                ><input type="checkbox" name="s1" value="c1" />
-                Overnight </label
-              ><br />
-              <label
-                ><input type="checkbox" name="s2" value="c1" /> 2-3 days </label
-              ><br />
-              <label
-                ><input type="checkbox" name="s3" value="c1" /> week+ </label
-              ><br />
-            </div>
-            <input type="submit" value="submit" />
-          </form>
-        </div>
-      </div>
-
-      <!-- Larping Button-->
-      <div class="dropdown">
-        <button onclick="myFunction('dropbtn5')" class="dropbtn5">Larping</button>
-        <div id="myDropdown" class="dropdown-content">
-        <button onclick="myFunction5()" class="dropbtn" class="larping">
-          Larping
-        </button>
-        <div id="myDropdown5" class="dropdown-content">
-          <form action="{{ url_for('return_info5') }}" method="POST">
-            <div class="amount-attending">
-              <h3>How experienced are you?</h3>
-              <label
-                ><input type="checkbox" name="q1" value="c1" /> Warrior(beginner) </label
-              ><br />
-              <label
-                ><input type="checkbox" name="q2" value="c1" /> Elf (intermediate) </label
-              ><br />
-              <label
-                ><input type="checkbox" name="q3" value="c1" /> Wizard (expert) </label
-              ><br />
-            </div>
-
-            <div class="experience-level-fi">
-              <h3>What park would choose?</h3>
-              <label
-                ><input type="checkbox" name="r1" value="c1" /> Wasatch Mountain State Park </label
-              ><br />
-              <label
-                ><input type="checkbox" name="r2" value="c1" /> Affleck Park </label
-              ><br />
-            </div>
-
-            <div class="time-lenght">
-              <h3>What type of being are you?</h3>
-              <label
-                ><input type="checkbox" name="s1" value="c1" /> Apprentice(wizard) </label
-              ><br />
-              <label
-                ><input type="checkbox" name="s2" value="c1" /> Elven archer </label
-              ><br />
-              <label
-                ><input type="checkbox" name="s3" value="c1" /> Healer </label
-              ><br />
-            </div>
-            <input type="submit" value="submit" />
-          </form>
-        </div>
       </div>
     </div>
 
-    <div class="features-section">
-      <div class="columns-wrapper">
-        <div class="column">
-          <i class="fas fa-truck-monster"></i>
-          <p>Special equipment may be required</p>
-  
-        </div>
-  
-        <div class="column">
-          <i class="fas fa-mountain"></i>
-          <p> Adventures!</p>
-  
-        </div>
-  
-        <div class="column">
-          <i class="far fa-laugh-wink"></i>
-          <p>100's of activities</p>
-  
-  
-        </div>
+    <div class="center-column">
+      <div class="banner-image">
+        <img src="../static/images/lake.jpg" alt="Logo">
       </div>
-    </div>
-  
-  
-    <div>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24251.060887210497!2d-111.64909879118348!3d40.55522727833588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x875270cd9928ed77%3A0x9d301509890913e9!2sMineral%20Basin!5e0!3m2!1sen!2sus!4v1585942650078!5m2!1sen!2sus"
-        width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" tabindex="0"></iframe>
-    </div>
-  
-    <div class="footer">
-      <div class="logo-footer">
-        <img src="images/lake.jpg">
-      </div>
-  
-  
+
       <div class="links-wrapper">
         <div class="nav-link">
           <a href="https://www.nwtf.org/hunt/article/ten-outdoor-survival-tips" target="_blank">Tips & Tricks</a>
         </div>
-  
+
         <div class="nav-link">
           <a href="https://wildlife.utah.gov/licenses/licenses-permits.html" target="_blank">Fishing License</a>
         </div>
-  
+
         <div class="nav-link">
           <a href="https://www.cabelas.com/category/Camping/104795280.uts" target="_blank">Camping Gear</a>
         </div>
-  
+
         <div class="nav-link">
           <a href="https://www.letsgoshooting.org/new-shooters/" target="_blank">For New Shooters</a>
         </div>
       </div>
-  
-      <div class="social-media-icons-wrapper">
-        <a href="#">
-          <i class="fab fa-instagram"></i>
-        </a>
-  
-        <a href="#">
-          <i class="fab fa-twitter"></i>
-        </a>
-  
-        <a href="#">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-      </div>
-  
-      <div class="copyright-wrapper">
-        &copy; 2020 Groovy cats and kittens &#124; All tigers reserved <i class="fas fa-cat"></i>
-  
-      </div>
-  
     </div>
-  </body>
-  <script>
 
-    function myFunction() {
-      document.getElementByClassName(class_name).classList.toggle("show");
-    // CAMPING FUNC
-    function myFunction1() {
-      document.getElementById("myDropdown1").classList.toggle("show");
-    }
-    window.onclick = function (event) {
-      if (!event.target.matches(".camping")) {
-        var dropdowns = document.getElementsById("myDropdown1");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains("show")) {
-            openDropdown.classList.remove("show");
-          }
+
+    <div class="right-column">
+      <div class="address-wrapper">
+        <a href="contact.html">
+
+      </div>
+
+      <div class="contact-icon">
+        <a href="contact.html">
+
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="buttons" align="center">
+    <!-- Camping Button-->
+    <div class="dropdown">
+      <button onclick="myFunction1()" class="dropbtn" class="camping">
+        Camping
+      </button>
+      <div id="myDropdown1" class="dropdown-content">
+        <form action="{{ url_for('return_info') }}" method="POST">
+          <div class="amount-attending">
+            <h3>How many people will be with you?</h3>
+            <label><input type="checkbox" name="q1" value="c1" /> Camping Alone </label><br />
+            <label><input type="checkbox" name="q2" value="c1" /> 2-3 people </label><br />
+            <label><input type="checkbox" name="q3" value="c1" /> 4 + </label><br />
+          </div>
+
+          <div class="experience-level">
+            <h3>What is your experience level?</h3>
+            <label><input type="checkbox" name="r1" value="c1" /> Beginner </label><br />
+            <label><input type="checkbox" name="r2" value="c1" /> Some Experience </label><br />
+            <label><input type="checkbox" name="r3" value="c1" /> I'm practically
+              Bear Grills </label><br />
+          </div>
+
+          <div class="time-lenght">
+            <h3>How long will you be camping?</h3>
+            <label><input type="checkbox" name="s1" value="c1" />
+              Overnight </label><br />
+            <label><input type="checkbox" name="s2" value="c1" /> 2-3 days </label><br />
+            <label><input type="checkbox" name="s3" value="c1" /> week+ </label><br />
+          </div>
+          <input type="submit" value="submit" />
+        </form>
+      </div>
+    </div>
+
+    <!--Off Raoding Button-->
+    <div class="dropdown">
+      <button onclick="myFunction2()" class="dropbtn" class="offroading">
+        Off Roading
+      </button>
+      <div id="myDropdown2" class="dropdown-content">
+        <form action="{{ url_for('return_info2') }}" method="POST">
+          <div class="vehicle-type">
+            <h3>What type of vehicle do you have?</h3>
+            <label><input type="checkbox" name="q1" value="c1" /> Razor </label><br />
+            <label><input type="checkbox" name="q2" value="c1" />
+              Fourwheeler </label><br />
+            <label><input type="checkbox" name="q3" value="c1" /> Jeep </label><br />
+          </div>
+
+          <div class="experience-level-or">
+            <h3>What is your experience level?</h3>
+            <label><input type="checkbox" name="r1" value="c1" /> Beginner </label><br />
+            <label><input type="checkbox" name="r2" value="c1" />
+              Intermediate </label><br />
+            <label><input type="checkbox" name="r3" value="c1" /> Expert </label><br />
+          </div>
+
+          <div class="terrain-type">
+            <h3>What type of riding do you like?</h3>
+            <label><input type="checkbox" name="s1" value="c1" /> Easy Trails </label><br />
+            <label><input type="checkbox" name="s2" value="c1" /> Moderate
+              Obstacles </label><br />
+            <label><input type="checkbox" name="s3" value="c1" /> Rocky Terrain </label><br />
+          </div>
+          <div class="time-lenght-or">
+            <h3>How long do you wanna ride for?</h3>
+            <label><input type="checkbox" name="s1" value="c1" /> 1-3 Hours </label><br />
+            <label><input type="checkbox" name="s2" value="c1" /> 3-5 Hours </label><br />
+            <label><input type="checkbox" name="s3" value="c1" /> 5-7 Hours </label><br />
+          </div>
+          <input type="submit" value="submit" />
+        </form>
+      </div>
+    </div>
+
+    <!--Shooting Button-->
+    <div class="dropdown">
+      <button onclick="myFunction3()" class="dropbtn" class="shooting">
+        Shooting
+      </button>
+      <div id="myDropdown3" class="dropdown-content">
+        <form action="{{ url_for('return_info3') }}" method="POST">
+          <div class="indoor-outdoor">
+            <h3>Would you like to be shooting indoor or outdoor?</h3>
+            <label><input type="checkbox" name="q1" value="c1" /> Indoor </label><br />
+            <label><input type="checkbox" name="q2" value="c1" /> Outdoor </label><br />
+          </div>
+
+          <div class="experience-level-or">
+            <h3>What is your experience level?</h3>
+            <label><input type="checkbox" name="r1" value="c1" /> Beginner </label><br />
+            <label><input type="checkbox" name="r2" value="c1" />
+              Intermediate </label><br />
+            <label><input type="checkbox" name="r3" value="c1" /> Expert </label><br />
+          </div>
+
+          <div class="shooting-type">
+            <h3>what type of shooting will you be doing?</h3>
+            <label><input type="checkbox" name="s1" value="c1" /> Skeet </label><br />
+            <label><input type="checkbox" name="s2" value="c1" /> Rifle </label><br />
+            <label><input type="checkbox" name="s3" value="c1" /> Pistol </label><br />
+            <label><input type="checkbox" name="s3" value="c1" /> Long Range Rifle </label><br />
+          </div>
+          <input type="submit" value="submit" />
+        </form>
+      </div>
+    </div>
+    <!-- Fishing Button-->
+    <div class="dropdown">
+      <button onclick="myFunction4()" class="dropbtn" class="fishing">
+        Fishing
+      </button>
+      <div id="myDropdown4" class="dropdown-content">
+        <form action="{{ url_for('return_info4') }}" method="POST">
+          <div class="amount-attending">
+            <h3>How many people will be with you?</h3>
+            <label><input type="checkbox" name="q1" value="c1" /> Camping Alone </label><br />
+            <label><input type="checkbox" name="q2" value="c1" /> 2-3 people </label><br />
+            <label><input type="checkbox" name="q3" value="c1" /> 4 + </label><br />
+          </div>
+
+          <div class="experience-level-fi">
+            <h3>What is your experience level?</h3>
+            <label><input type="checkbox" name="r1" value="c1" /> Beginner </label><br />
+            <label><input type="checkbox" name="r2" value="c1" /> Some Experience </label><br />
+            <label><input type="checkbox" name="r3" value="c1" /> I'm practically
+              Bear Grills </label><br />
+          </div>
+
+          <div class="time-lenght">
+            <h3>How long will you be fishing for?</h3>
+            <label><input type="checkbox" name="s1" value="c1" />
+              Overnight </label><br />
+            <label><input type="checkbox" name="s2" value="c1" /> 2-3 days </label><br />
+            <label><input type="checkbox" name="s3" value="c1" /> week+ </label><br />
+          </div>
+          <input type="submit" value="submit" />
+        </form>
+      </div>
+    </div>
+
+    <!-- Larping Button-->
+    <div class="dropdown">
+      <button onclick="myFunction5()" class="dropbtn" class="larping">
+        Larping
+      </button>
+      <div id="myDropdown5" class="dropdown-content">
+        <form action="{{ url_for('return_info5') }}" method="POST">
+          <div class="amount-attending">
+            <h3>How experienced are you?</h3>
+            <label><input type="checkbox" name="q1" value="c1" /> Warrior(beginner) </label><br />
+            <label><input type="checkbox" name="q2" value="c1" /> Elf (intermediate) </label><br />
+            <label><input type="checkbox" name="q3" value="c1" /> Wizard (expert) </label><br />
+          </div>
+
+          <div class="experience-level-fi">
+            <h3>What park would choose?</h3>
+            <label><input type="checkbox" name="r1" value="c1" /> Wasatch Mountain State Park </label><br />
+            <label><input type="checkbox" name="r2" value="c1" /> Affleck Park </label><br />
+          </div>
+
+          <div class="time-lenght">
+            <h3>What type of being are you?</h3>
+            <label><input type="checkbox" name="s1" value="c1" /> Apprentice(wizard) </label><br />
+            <label><input type="checkbox" name="s2" value="c1" /> Elven archer </label><br />
+            <label><input type="checkbox" name="s3" value="c1" /> Healer </label><br />
+          </div>
+          <input type="submit" value="submit" />
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="features-section">
+    <div class="columns-wrapper">
+      <div class="column">
+        <i class="fas fa-truck-monster"></i>
+        <p>Special equipment may be required</p>
+
+      </div>
+
+      <div class="column">
+        <i class="fas fa-mountain"></i>
+        <p> Adventures!</p>
+
+      </div>
+
+      <div class="column">
+        <i class="far fa-laugh-wink"></i>
+        <p>100's of activities</p>
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <div>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24251.060887210497!2d-111.64909879118348!3d40.55522727833588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x875270cd9928ed77%3A0x9d301509890913e9!2sMineral%20Basin!5e0!3m2!1sen!2sus!4v1585942650078!5m2!1sen!2sus"
+      width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" tabindex="0"></iframe>
+  </div>
+
+  <div class="footer">
+    <div class="logo-footer">
+      <img src="../static/images/lake.jpg">
+    </div>
+
+
+    <div class="links-wrapper">
+      <div class="nav-link">
+        <a href="https://www.nwtf.org/hunt/article/ten-outdoor-survival-tips" target="_blank">Tips & Tricks</a>
+      </div>
+
+      <div class="nav-link">
+        <a href="https://wildlife.utah.gov/licenses/licenses-permits.html" target="_blank">Fishing License</a>
+      </div>
+
+      <div class="nav-link">
+        <a href="https://www.cabelas.com/category/Camping/104795280.uts" target="_blank">Camping Gear</a>
+      </div>
+
+      <div class="nav-link">
+        <a href="https://www.letsgoshooting.org/new-shooters/" target="_blank">For New Shooters</a>
+      </div>
+    </div>
+
+    <div class="social-media-icons-wrapper">
+      <a href="#">
+        <i class="fab fa-instagram"></i>
+      </a>
+
+      <a href="#">
+        <i class="fab fa-twitter"></i>
+      </a>
+
+      <a href="#">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </div>
+
+    <div class="copyright-wrapper">
+      &copy; 2020 Groovy cats and kittens &#124; All tigers reserved <i class="fas fa-cat"></i>
+
+    </div>
+
+  </div>
+</body>
+<script>
+  // CAMPING FUNC
+  function myFunction1() {
+    document.getElementById("myDropdown1").classList.toggle("show");
+  }
+  window.onclick = function (event) {
+    if (!event.target.matches(".camping")) {
+      var dropdowns = document.getElementsById("myDropdown1");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains("show")) {
+          openDropdown.classList.remove("show");
         }
       }
-    };
-
-    // OFFROADING FUNC
-    function myFunction2() {
-      document.getElementById("myDropdown2").classList.toggle("show");
     }
-    window.onclick = function (event) {
-      if (!event.target.matches(".offroading")) {
-        var dropdowns = document.getElementsById("myDropdown2");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains("show")) {
-            openDropdown.classList.remove("show");
-          }
+  };
+
+  // OFFROADING FUNC
+  function myFunction2() {
+    document.getElementById("myDropdown2").classList.toggle("show");
+  }
+  window.onclick = function (event) {
+    if (!event.target.matches(".offroading")) {
+      var dropdowns = document.getElementsById("myDropdown2");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains("show")) {
+          openDropdown.classList.remove("show");
         }
       }
-    };
-
-    // SHOOTING FUNC
-    function myFunction3() {
-      document.getElementById("myDropdown3").classList.toggle("show");
     }
-    window.onclick = function (event) {
-      if (!event.target.matches(".shooting")) {
-        var dropdowns = document.getElementsById("myDropdown3");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains("show")) {
-            openDropdown.classList.remove("show");
-          }
+  };
+
+  // SHOOTING FUNC
+  function myFunction3() {
+    document.getElementById("myDropdown3").classList.toggle("show");
+  }
+  window.onclick = function (event) {
+    if (!event.target.matches(".shooting")) {
+      var dropdowns = document.getElementsById("myDropdown3");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains("show")) {
+          openDropdown.classList.remove("show");
         }
       }
-    };
-
-    // FISHING FUNC
-    function myFunction4() {
-      document.getElementById("myDropdown4").classList.toggle("show");
     }
-    window.onclick = function (event) {
-      if (!event.target.matches(".fishing")) {
-        var dropdowns = document.getElementsById("myDropdown4");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains("show")) {
-            openDropdown.classList.remove("show");
-          }
+  };
+
+  // FISHING FUNC
+  function myFunction4() {
+    document.getElementById("myDropdown4").classList.toggle("show");
+  }
+  window.onclick = function (event) {
+    if (!event.target.matches(".fishing")) {
+      var dropdowns = document.getElementsById("myDropdown4");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains("show")) {
+          openDropdown.classList.remove("show");
         }
       }
-    };
-
-    // LARPING FUNC
-    function myFunction5() {
-      document.getElementById("myDropdown5").classList.toggle("show");
     }
-    window.onclick = function (event) {
-      if (!event.target.matches(class_name)) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-      if (!event.target.matches(".larping")) {
-        var dropdowns = document.getElementsById("myDropdown5");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains("show")) {
-            openDropdown.classList.remove("show");
-          }
+  };
+
+  // LARPING FUNC
+  function myFunction5() {
+    document.getElementById("myDropdown5").classList.toggle("show");
+  }
+  window.onclick = function (event) {
+    if (!event.target.matches(".larping")) {
+      var dropdowns = document.getElementsById("myDropdown5");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains("show")) {
+          openDropdown.classList.remove("show");
         }
       }
-    };
-  </script>
+    }
+  };
+</script>
 </html>
