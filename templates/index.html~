@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
-    <title>Team Exotic's ActivityHub</title>
+    <title>Document</title>
     <style>
       .dropbtn {
         background-color: #3498DB;
@@ -26,6 +26,7 @@
         display: inline-block;
       }
       
+
       .dropdown-content {
         display: none;
         position: absolute;
@@ -34,6 +35,7 @@
         z-index: 1;
       }
       
+
       .dropdown-content a {
         color: black;
         padding: 12px 16px;
@@ -41,10 +43,11 @@
         display: block;
       }
       
+
       .dropdown-content a:hover {background-color: #ddd}
       
-      .show {display:block;}
 
+      .show {display:block;}
     </style>
 </head>
 <body>
@@ -57,36 +60,36 @@
             <label><input type="checkbox" name="q1" value="c1">
               Camping Alone
             </label><br />
-            <label><input type="checkbox" name="q2" value="c1">
+            <label><input type="checkbox" name="q1" value="c1">
               2-3 people
             </label><br />
-            <label><input type="checkbox" name="q3" value="c1">
+            <label><input type="checkbox" name="q1" value="c1">
               4 +
             </label><br />
           </div>
  
           <div class = "experience-level">
             <h3>What is your experience level?</h3>
-            <label><input type="checkbox" name="r1" value="c1">
+            <label><input type="checkbox" name="q1" value="c1">
               Beginner
             </label><br />
-            <label><input type="checkbox" name="r2" value="c1">
+            <label><input type="checkbox" name="q1" value="c1">
               Some Experience
             </label><br />
-            <label><input type="checkbox" name="r3" value="c1">
+            <label><input type="checkbox" name="q1" value="c1">
               I'm practically Bear Grills
             </label><br />
           </div>
 
           <div class = "time-lenght">
             <h3>How long will you be camping?</h3>
-            <label><input type="checkbox" name="s1" value="c1">
+            <label><input type="checkbox" name="q1" value="c1">
               Overnight
             </label><br />
-            <label><input type="checkbox" name="s2" value="c1">
+            <label><input type="checkbox" name="q1" value="c1">
               2-3 days
             </label><br />
-            <label><input type="checkbox" name="s3" value="c1">
+            <label><input type="checkbox" name="q1" value="c1">
               week+
             </label><br />
           </div>

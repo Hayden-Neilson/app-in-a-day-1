@@ -8,11 +8,10 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route("/", methods=["POST"])
-def return_info(string):
-    #look at what gets returned
-    #pars it into a useable set of indexes
-    console.log("good")
+@app.route("/return_info", methods=["POST"])
+def return_info():
+    if request.method == "POST":
+       return request.form
 
 
 if __name__ == "__main__":
