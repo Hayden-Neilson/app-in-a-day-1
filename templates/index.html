@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Team Exotic's ActivityHub</title>
     <style>
       .dropbtn {
-        background-color: #3498DB;
+        background-color: #3498db;
         width: 900px;
         color: white;
         padding: 16px;
         font-size: 16px;
         border: none;
         cursor: pointer;
-    
       }
 
-      .dropbtn:hover, .dropbtn:focus {
-        background-color: #2980B9;
+      .dropbtn:hover,
+      .dropbtn:focus {
+        background-color: #2980b9;
       }
 
       .dropdown {
         position: relative;
         display: inline-block;
       }
-      
 
       .dropdown-content {
         display: none;
@@ -34,7 +33,6 @@
         min-width: 900px;
         z-index: 1;
       }
-      
 
       .dropdown-content a {
         color: black;
@@ -42,79 +40,303 @@
         text-decoration: none;
         display: block;
       }
-      
 
-      .dropdown-content a:hover {background-color: #ddd}
-      
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
 
-      .show {display:block;}
+      .show {
+        display: block;
+      }
     </style>
-</head>
-<body>
-    <div class="dropdown">
+  </head>
+  <body>
+    <div class="buttons">
+      <!-- Camping Button-->
+      <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">Camping</button>
         <div id="myDropdown" class="dropdown-content">
-		<form action="{{ url_for('return_info') }}" method="POST">
-          <div class = "amount-attending">
-            <h3>How many people will be with you?</h3>
-            <label><input type="checkbox" name="q1" value="c1">
-              Camping Alone
-            </label><br />
-            <label><input type="checkbox" name="q2" value="c1">
-              2-3 people
-            </label><br />
-            <label><input type="checkbox" name="q3" value="c1">
-              4 +
-            </label><br />
-          </div>
- 
-          <div class = "experience-level">
-            <h3>What is your experience level?</h3>
-            <label><input type="checkbox" name="r1" value="c1">
-              Beginner
-            </label><br />
-            <label><input type="checkbox" name="r2" value="c1">
-              Some Experience
-            </label><br />
-            <label><input type="checkbox" name="r3" value="c1">
-              I'm practically Bear Grills
-            </label><br />
-          </div>
+          <form action="{{ url_for('return_info') }}" method="POST">
+            <div class="amount-attending">
+              <h3>How many people will be with you?</h3>
+              <label
+                ><input type="checkbox" name="q1" value="c1" /> Camping Alone </label
+              ><br />
+              <label
+                ><input type="checkbox" name="q2" value="c1" /> 2-3 people </label
+              ><br />
+              <label><input type="checkbox" name="q3" value="c1" /> 4 + </label
+              ><br />
+            </div>
 
-          <div class = "time-lenght">
-            <h3>How long will you be camping?</h3>
-            <label><input type="checkbox" name="s1" value="c1">
-              Overnight
-            </label><br />
-            <label><input type="checkbox" name="s2" value="c1">
-              2-3 days
-            </label><br />
-            <label><input type="checkbox" name="s3" value="c1">
-              week+
-            </label><br />
-          </div>
-	  <input type="submit" value="submit">
-	</form>
+            <div class="experience-level">
+              <h3>What is your experience level?</h3>
+              <label
+                ><input type="checkbox" name="r1" value="c1" /> Beginner </label
+              ><br />
+              <label
+                ><input type="checkbox" name="r2" value="c1" /> Some Experience </label
+              ><br />
+              <label
+                ><input type="checkbox" name="r3" value="c1" /> I'm practically
+                Bear Grills </label
+              ><br />
+            </div>
+
+            <div class="time-lenght">
+              <h3>How long will you be camping?</h3>
+              <label
+                ><input type="checkbox" name="s1" value="c1" />
+                Overnight </label
+              ><br />
+              <label
+                ><input type="checkbox" name="s2" value="c1" /> 2-3 days </label
+              ><br />
+              <label
+                ><input type="checkbox" name="s3" value="c1" /> week+ </label
+              ><br />
+            </div>
+            <input type="submit" value="submit" />
+          </form>
         </div>
       </div>
-</body>
-<script>
-  function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
-  
-  // Close the dropdown menu if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
+
+      <!--Off Raoding Button-->
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Off Roading</button>
+        <div id="myDropdown" class="dropdown-content">
+          <form action="{{ url_for('return_info2') }}" method="POST">
+            <div class="vehicle-type">
+              <h3>What type of vehicle do you have?</h3>
+              <label
+                ><input type="checkbox" name="q1" value="c1" /> Razor </label
+              ><br />
+              <label
+                ><input type="checkbox" name="q2" value="c1" />
+                Fourwheeler </label
+              ><br />
+              <label><input type="checkbox" name="q3" value="c1" /> Jeep </label
+              ><br />
+            </div>
+
+            <div class="experience-level-or">
+              <h3>What is your experience level?</h3>
+              <label
+                ><input type="checkbox" name="r1" value="c1" /> Beginner </label
+              ><br />
+              <label
+                ><input type="checkbox" name="r2" value="c1" />
+                Intermediate </label
+              ><br />
+              <label
+                ><input type="checkbox" name="r3" value="c1" /> Expert </label
+              ><br />
+            </div>
+
+            <div class="terrain-type">
+              <h3>What type of riding do you like?</h3>
+              <label
+                ><input type="checkbox" name="s1" value="c1" /> Easy Trails </label
+              ><br />
+              <label
+                ><input type="checkbox" name="s2" value="c1" /> Moderate
+                Obstacles </label
+              ><br />
+              <label
+                ><input type="checkbox" name="s3" value="c1" /> Rocky Terrain </label
+              ><br />
+            </div>
+            <div class="time-lenght-or">
+              <h3>How long do you wanna ride for?</h3>
+              <label
+                ><input type="checkbox" name="s1" value="c1" /> 1-3 Hours </label
+              ><br />
+              <label
+                ><input type="checkbox" name="s2" value="c1" /> 3-5 Hours </label
+              ><br />
+              <label
+                ><input type="checkbox" name="s3" value="c1" /> 5-7 Hours </label
+              ><br />
+            </div>
+            <input type="submit" value="submit" />
+          </form>
+        </div>
+      </div>
+
+      <!--Shooting Button-->
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Shooting</button>
+        <div id="myDropdown" class="dropdown-content">
+          <form action="{{ url_for('return_info3') }}" method="POST">
+            <div class="indoor-outdoor">
+              <h3>Would you like to be shooting indoor or outdoor?</h3>
+              <label
+                ><input type="checkbox" name="q1" value="c1" /> Indoor </label
+              ><br />
+              <label
+                ><input type="checkbox" name="q2" value="c1" /> Outdoor </label
+              ><br />
+            </div>
+
+            <div class="experience-level-or">
+              <h3>What is your experience level?</h3>
+              <label
+                ><input type="checkbox" name="r1" value="c1" /> Beginner </label
+              ><br />
+              <label
+                ><input type="checkbox" name="r2" value="c1" />
+                Intermediate </label
+              ><br />
+              <label
+                ><input type="checkbox" name="r3" value="c1" /> Expert </label
+              ><br />
+            </div>
+
+            <div class="shooting-type">
+              <h3>what type of shooting will you be doing?</h3>
+              <label
+                ><input type="checkbox" name="s1" value="c1" /> Skeet </label
+              ><br />
+              <label
+                ><input type="checkbox" name="s2" value="c1" /> Rifle </label
+              ><br />
+              <label
+                ><input type="checkbox" name="s3" value="c1" /> Pistol </label
+              ><br />
+              <label
+                ><input type="checkbox" name="s3" value="c1" /> Long Range Rifle </label
+              ><br />
+            </div>
+            <input type="submit" value="submit" />
+          </form>
+        </div>
+      </div>
+      <!-- Fishing Button-->
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Fishing</button>
+        <div id="myDropdown" class="dropdown-content">
+          <form action="{{ url_for('return_info4') }}" method="POST">
+            <div class="amount-attending">
+              <h3>How many people will be with you?</h3>
+              <label
+                ><input type="checkbox" name="q1" value="c1" /> Camping Alone </label
+              ><br />
+              <label
+                ><input type="checkbox" name="q2" value="c1" /> 2-3 people </label
+              ><br />
+              <label><input type="checkbox" name="q3" value="c1" /> 4 + </label
+              ><br />
+            </div>
+
+            <div class="experience-level-fi">
+              <h3>What is your experience level?</h3>
+              <label
+                ><input type="checkbox" name="r1" value="c1" /> Beginner </label
+              ><br />
+              <label
+                ><input type="checkbox" name="r2" value="c1" /> Some Experience </label
+              ><br />
+              <label
+                ><input type="checkbox" name="r3" value="c1" /> I'm practically
+                Bear Grills </label
+              ><br />
+            </div>
+
+            <div class="time-lenght">
+              <h3>How long will you be fishing for?</h3>
+              <label
+                ><input type="checkbox" name="s1" value="c1" />
+                Overnight </label
+              ><br />
+              <label
+                ><input type="checkbox" name="s2" value="c1" /> 2-3 days </label
+              ><br />
+              <label
+                ><input type="checkbox" name="s3" value="c1" /> week+ </label
+              ><br />
+            </div>
+            <input type="submit" value="submit" />
+          </form>
+        </div>
+      </div>
+
+      <!-- Larping Button-->
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Larping</button>
+        <div id="myDropdown" class="dropdown-content">
+          <form action="{{ url_for('return_info5') }}" method="POST">
+            <div class="amount-attending">
+              <h3>Larping Question 1</h3>
+              <label
+                ><input type="checkbox" name="q1" value="c1" /> Option 1 </label
+              ><br />
+              <label
+                ><input type="checkbox" name="q2" value="c1" /> Option 2 </label
+              ><br />
+              <label
+                ><input type="checkbox" name="q3" value="c1" /> Option 3 </label
+              ><br />
+            </div>
+
+            <div class="experience-level-fi">
+              <h3>Larping Question 2</h3>
+              <label
+                ><input type="checkbox" name="r1" value="c1" /> Option 1 </label
+              ><br />
+              <label
+                ><input type="checkbox" name="r2" value="c1" /> Option 2 </label
+              ><br />
+              <label
+                ><input type="checkbox" name="r3" value="c1" /> Option 3 </label
+              ><br />
+            </div>
+
+            <div class="time-lenght">
+              <h3>Larping Question 3</h3>
+              <label
+                ><input type="checkbox" name="s1" value="c1" /> Option 1 </label
+              ><br />
+              <label
+                ><input type="checkbox" name="s2" value="c1" /> Option 2 </label
+              ><br />
+              <label
+                ><input type="checkbox" name="s3" value="c1" /> Option 3 </label
+              ><br />
+            </div>
+            <input type="submit" value="submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Footer-->
+    <div class="footer">
+      <div class="links-wrapper">
+        <div class="nav-link">
+          <a href="index.html">Home</a>
+        </div>
+        <div class="nav-link">
+          <a href="about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function (event) {
+      if (!event.target.matches(".dropbtn")) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains("show")) {
+            openDropdown.classList.remove("show");
+          }
         }
       }
-    }
-  }
-</script>
+    };
+  </script>
 </html>
