@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles/styles.css" />
     <title>Team Exotic's ActivityHub</title>
     <style>
-      .dropbtn {
+      .dropbtn, .dropbtn5 {
         background-color: #3498db;
         width: 900px;
         color: white;
@@ -122,28 +122,28 @@
             <div class="experience-level-or">
               <h3>What is your experience level?</h3>
               <label
-                ><input type="checkbox" name="r1" value="c1" /> Beginner </label
+                ><input type="checkbox" name="q1" value="c1" /> Beginner </label
               ><br />
               <label
-                ><input type="checkbox" name="r2" value="c1" />
+                ><input type="checkbox" name="q2" value="c1" />
                 Intermediate </label
               ><br />
               <label
-                ><input type="checkbox" name="r3" value="c1" /> Expert </label
+                ><input type="checkbox" name="q3" value="c1" /> Expert </label
               ><br />
             </div>
 
             <div class="terrain-type">
               <h3>What type of riding do you like?</h3>
               <label
-                ><input type="checkbox" name="s1" value="c1" /> Easy Trails </label
+                ><input type="checkbox" name="r1" value="c1" /> Easy Trails </label
               ><br />
               <label
-                ><input type="checkbox" name="s2" value="c1" /> Moderate
+                ><input type="checkbox" name="r2" value="c1" /> Moderate
                 Obstacles </label
               ><br />
               <label
-                ><input type="checkbox" name="s3" value="c1" /> Rocky Terrain </label
+                ><input type="checkbox" name="r3" value="c1" /> Rocky Terrain </label
               ><br />
             </div>
             <div class="time-lenght-or">
@@ -262,7 +262,7 @@
 
       <!-- Larping Button-->
       <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Larping</button>
+        <button onclick="myFunction('dropbtn5')" class="dropbtn5">Larping</button>
         <div id="myDropdown" class="dropdown-content">
           <form action="{{ url_for('return_info5') }}" method="POST">
             <div class="amount-attending">
@@ -322,12 +322,12 @@
   </body>
   <script>
     function myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
+      document.getElementByClassName(class_name).classList.toggle("show");
     }
 
     // Close the dropdown menu if the user clicks outside of it
     window.onclick = function (event) {
-      if (!event.target.matches(".dropbtn")) {
+      if (!event.target.matches(class_name)) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
         for (i = 0; i < dropdowns.length; i++) {
