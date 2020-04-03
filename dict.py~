@@ -70,3 +70,51 @@ dict_of_camping_returns = {
         "s2": "<div>missed mark</div>",
         "s3": "<h3>test</h3>\n",
         }
+
+dict_of_off_roading_returns = {
+        "q1": "<h1>test</h1>\n",
+        "q2": "<div>missed mark</div>",
+        "q3": "<div>missed mark</div>",
+        "r1": "<div>missed mark</div>",
+        "r2": "<h2>test</h2>\n",
+        "r3": "<div>missed mark</div>",
+        "s1": "<div>missed mark</div>",
+        "s2": "<div>missed mark</div>",
+        "s3": "<h3>test</h3>\n",
+        }
+
+dict_of_shooting_returns = {
+        "q1": "<h1>test</h1>\n",
+        "q2": "<div>missed mark</div>",
+        "q3": "<div>missed mark</div>",
+        "r1": "<div>missed mark</div>",
+        "r2": "<h2>test</h2>\n",
+        "r3": "<div>missed mark</div>",
+        "s1": "<div>missed mark</div>",
+        "s2": "<div>missed mark</div>",
+        "s3": "<h3>test</h3>\n",
+        }
+
+dict_of_fishing_returns = {
+        "q1": "<h1>test</h1>\n",
+        "q2": "<div>missed mark</div>",
+        "q3": "<div>missed mark</div>",
+        "r1": "<div>missed mark</div>",
+        "r2": "<h2>test</h2>\n",
+        "r3": "<div>missed mark</div>",
+        "s1": "<div>missed mark</div>",
+        "s2": "<div>missed mark</div>",
+        "s3": "<h3>test</h3>\n",
+        }
+
+dict_of_LARPing_returns = {
+        "q1": "<h1>test</h1>\n",
+        "q2": "<div>missed mark</div>",
+        "q3": "<div>missed mark</div>",
+        "r1": "<div>missed mark</div>",
+        "r2": "<h2>test</h2>\n",
+        "r3": "<div>missed mark</div>",
+        "s1": "<div>missed mark</div>",
+        "s2": "<div>missed mark</div>",
+        "s3": "<h3>test</h3>\n",
+        }
