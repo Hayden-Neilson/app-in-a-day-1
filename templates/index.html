@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/styles.css" />
     <title>Team Exotic's ActivityHub</title>
     <style>
       .dropbtn {
@@ -32,9 +31,10 @@
         background-color: #f1f1f1;
         min-width: 900px;
         z-index: 1;
+        align-content: flex-start;
       }
 
-      .dropdown-content a {
+      .dropdown-content input {
         color: black;
         padding: 12px 16px;
         text-decoration: none;
@@ -51,11 +51,13 @@
     </style>
   </head>
   <body>
-    <div class="buttons">
+    <div class="buttons" align="center">
       <!-- Camping Button-->
       <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Camping</button>
-        <div id="myDropdown" class="dropdown-content">
+        <button onclick="myFunction1()" class="dropbtn" class="camping">
+          Camping
+        </button>
+        <div id="myDropdown1" class="dropdown-content">
           <form action="{{ url_for('return_info') }}" method="POST">
             <div class="amount-attending">
               <h3>How many people will be with you?</h3>
@@ -103,8 +105,10 @@
 
       <!--Off Raoding Button-->
       <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Off Roading</button>
-        <div id="myDropdown" class="dropdown-content">
+        <button onclick="myFunction2()" class="dropbtn" class="offroading">
+          Off Roading
+        </button>
+        <div id="myDropdown2" class="dropdown-content">
           <form action="{{ url_for('return_info2') }}" method="POST">
             <div class="vehicle-type">
               <h3>What type of vehicle do you have?</h3>
@@ -165,8 +169,10 @@
 
       <!--Shooting Button-->
       <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Shooting</button>
-        <div id="myDropdown" class="dropdown-content">
+        <button onclick="myFunction3()" class="dropbtn" class="shooting">
+          Shooting
+        </button>
+        <div id="myDropdown3" class="dropdown-content">
           <form action="{{ url_for('return_info3') }}" method="POST">
             <div class="indoor-outdoor">
               <h3>Would you like to be shooting indoor or outdoor?</h3>
@@ -213,8 +219,10 @@
       </div>
       <!-- Fishing Button-->
       <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Fishing</button>
-        <div id="myDropdown" class="dropdown-content">
+        <button onclick="myFunction4()" class="dropbtn" class="fishing">
+          Fishing
+        </button>
+        <div id="myDropdown4" class="dropdown-content">
           <form action="{{ url_for('return_info4') }}" method="POST">
             <div class="amount-attending">
               <h3>How many people will be with you?</h3>
@@ -262,8 +270,10 @@
 
       <!-- Larping Button-->
       <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Larping</button>
-        <div id="myDropdown" class="dropdown-content">
+        <button onclick="myFunction5()" class="dropbtn" class="larping">
+          Larping
+        </button>
+        <div id="myDropdown5" class="dropdown-content">
           <form action="{{ url_for('return_info5') }}" method="POST">
             <div class="amount-attending">
               <h3>Larping Question 1</h3>
@@ -321,14 +331,81 @@
     </div>
   </body>
   <script>
-    function myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
+    // CAMPING FUNC
+    function myFunction1() {
+      document.getElementById("myDropdown1").classList.toggle("show");
     }
-
-    // Close the dropdown menu if the user clicks outside of it
     window.onclick = function (event) {
-      if (!event.target.matches(".dropbtn")) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
+      if (!event.target.matches(".camping")) {
+        var dropdowns = document.getElementsById("myDropdown1");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains("show")) {
+            openDropdown.classList.remove("show");
+          }
+        }
+      }
+    };
+
+    // OFFROADING FUNC
+    function myFunction2() {
+      document.getElementById("myDropdown2").classList.toggle("show");
+    }
+    window.onclick = function (event) {
+      if (!event.target.matches(".offroading")) {
+        var dropdowns = document.getElementsById("myDropdown2");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains("show")) {
+            openDropdown.classList.remove("show");
+          }
+        }
+      }
+    };
+
+    // SHOOTING FUNC
+    function myFunction3() {
+      document.getElementById("myDropdown3").classList.toggle("show");
+    }
+    window.onclick = function (event) {
+      if (!event.target.matches(".shooting")) {
+        var dropdowns = document.getElementsById("myDropdown3");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains("show")) {
+            openDropdown.classList.remove("show");
+          }
+        }
+      }
+    };
+
+    // FISHING FUNC
+    function myFunction4() {
+      document.getElementById("myDropdown4").classList.toggle("show");
+    }
+    window.onclick = function (event) {
+      if (!event.target.matches(".fishing")) {
+        var dropdowns = document.getElementsById("myDropdown4");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains("show")) {
+            openDropdown.classList.remove("show");
+          }
+        }
+      }
+    };
+
+    // LARPING FUNC
+    function myFunction5() {
+      document.getElementById("myDropdown5").classList.toggle("show");
+    }
+    window.onclick = function (event) {
+      if (!event.target.matches(".larping")) {
+        var dropdowns = document.getElementsById("myDropdown5");
         var i;
         for (i = 0; i < dropdowns.length; i++) {
           var openDropdown = dropdowns[i];
