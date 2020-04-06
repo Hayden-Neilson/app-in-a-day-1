@@ -219,7 +219,7 @@ dict_of_fishing_returns = {
     "q3": """
 <div class="answer">
 	<h3>A party of 4+</h3>
-	<p>Not much fishing is going to get done in a group this big, bring a fuckton of booze, and get ready for a good time. hell, fishing equiptment is optional at this point.</p>
+	<p>Not much fishing is going to get done in a group this big, bring a crapton of booze, and get ready for a good time. fishing equiptment is optional at this point.</p>
 </div>""",
     "r1": """
 <div class="answer">
@@ -234,7 +234,7 @@ dict_of_fishing_returns = {
     "r3": """
 <div class="answer">
 	<h3>So you are God himself huh?</h3>
-	<p>Idk man, you are the god of fishing, do whatever the fuck you want</p>
+	<p>Idk man, you are the boss of fishing, do whatever you want</p>
 </div>""",
     "s1": """
 <div class="answer">
@@ -248,7 +248,7 @@ dict_of_fishing_returns = {
 </div>""",
     "s3": """
 <div class="answer">
-	<h3>All day fishing is the shit</h3>
+	<h3>All day fishing is the stuff</h3>
 	<p>remember the important thing is to have fun</h3>
 </div>""",
 }
